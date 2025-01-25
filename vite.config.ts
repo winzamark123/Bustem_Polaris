@@ -46,6 +46,8 @@ export default defineConfig({
       allow: ["app", "node_modules"],
     },
   },
+  css: {
+  },
   plugins: [
     remix({
       ignoredRouteFiles: ["**/.*"],
