@@ -3,6 +3,8 @@ import { Page } from "@shopify/polaris";
 import { TitleBar } from "@shopify/app-bridge-react";
 import { authenticate } from "../shopify.server";
 import Demo from "./components/demo";
+import ProductCard from "./components/ProductCard";
+import TestLayout from "./components/TestLayout";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   await authenticate.admin(request);
@@ -83,6 +85,8 @@ export default function Index() {
     <Page>
       <TitleBar title="Bustem_Polaris App" />
       <Demo />
+      <TestLayout />
+      <ProductCard />
     </Page>
   );
 }
