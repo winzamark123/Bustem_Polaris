@@ -33,13 +33,13 @@ import {
             </InlineStack>
             <InlineGrid columns={2}>
                 {hideOptions.map((option, index) => (
-                    <Card key={index} background="bg-fill-secondary">
+                    <Card key={index} background="bg-fill-secondary" padding="300">
                         <InlineStack gap="400" align="space-between">
                             <InlineStack gap="200" align="start" blockAlign="center">
                                 <Box>
                                     <Icon source={InfoIcon} />
                                 </Box>
-                                <Text as="h3" variant="headingMd">{option.description}</Text>
+                                <Text as="p" variant="bodyMd">{option.description}</Text>
                             </InlineStack>
                             <Button>{option.button}</Button>
                         </InlineStack>
