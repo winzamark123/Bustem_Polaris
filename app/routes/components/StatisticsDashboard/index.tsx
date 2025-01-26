@@ -1,17 +1,33 @@
 import StatisticsHeader from './header';
-import StatisticsInfo from './info';
-import {
-  BlockStack,
-  Card,
-} from '@shopify/polaris';
+import InfoCard from '../ui/InfoCard';
+
+const statisticsData = [
+  {
+    title: 'Total Savings',
+    value: '$0',
+    subtitle: '+$0 Saved',
+  },
+  {
+    title: 'Average Competition',
+    value: '—',
+    subtitle: '—% less competition',
+  },
+  {
+    title: 'Success Rate',
+    value: '—',
+    subtitle: '—% save rate',
+  },
+  {
+    title: 'Total Claims',
+    value: '0',
+    subtitle: '0 Total Claims',
+  },
+];
 
 export default function StatisticsDashboard() {
   return (
-    <Card>
-      <BlockStack gap="400">
-      <StatisticsHeader />
-      <StatisticsInfo />
-      </BlockStack>
-    </Card>
+    <main>
+      <InfoCard header={<StatisticsHeader />} items={statisticsData} />
+    </main>
   );
 }

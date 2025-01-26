@@ -5,13 +5,13 @@ import {
   Card,
 } from '@shopify/polaris';
 
-interface StatisticsInfoItemProps {
+interface InfoItemProps {
   title: string;
   value: string;
   subtitle: string;
 }
 
-export default function StatisticsInfoItem({ title, value, subtitle }: StatisticsInfoItemProps) {
+export default function InfoItem({ title, value, subtitle }: InfoItemProps) {
   return (
       <Card>
       <BlockStack gap="200">
