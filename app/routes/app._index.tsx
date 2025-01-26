@@ -1,10 +1,12 @@
 import type { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/node";
-import { Page } from "@shopify/polaris";
+import { BlockStack, Page } from "@shopify/polaris";
 import { TitleBar } from "@shopify/app-bridge-react";
 import { authenticate } from "../shopify.server";
 import Demo from "./components/demo";
-import ProductCard from "./components/ProductCard";
 import TestLayout from "./components/TestLayout";
+import Statistics from "./components/StatisticsDashboard";
+import Latest from "./components/Latest";
+import Claims from "./components/Claims";
 
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   await authenticate.admin(request);
@@ -83,10 +85,14 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 export default function Index() {
   return (
     <Page>
-      <TitleBar title="Bustem_Polaris App" />
-      <Demo />
-      <TestLayout />
-      <ProductCard />
+      <BlockStack gap="400">
+        <TitleBar title="Bustem_Polaris App" />
+        <Statistics />
+        <Latest />
+        <Claims />
+        <Demo />
+        <TestLayout />
+      </BlockStack>
     </Page>
   );
 }
