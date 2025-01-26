@@ -1,5 +1,6 @@
 import StatisticsHeader from './header';
 import InfoCard from '../ui/InfoCard';
+import StatisticsItem from './item';
 
 const statisticsData = [
   {
@@ -27,7 +28,7 @@ const statisticsData = [
 export default function StatisticsDashboard() {
   return (
     <main>
-      <InfoCard header={<StatisticsHeader />} items={statisticsData} />
+      <InfoCard header={<StatisticsHeader />} items={statisticsData} ItemLayout={StatisticsItem} />
     </main>
   );
 }

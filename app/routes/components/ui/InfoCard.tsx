@@ -1,20 +1,13 @@
-import { BlockStack, Card, InlineGrid } from '@shopify/polaris';
+import { BlockStack, Card, InlineGrid, Box } from '@shopify/polaris';
 import InfoCardItem from './info_item';
-
-interface InfoCardItemProps{
-  title: string;
-  value: string;
-  subtitle: string;
-}
-
 interface InfoCardProps {
   header: React.ReactNode;
-  items: InfoCardItemProps[];
+  items: any[];
+  ItemLayout?: React.ComponentType<any>;
   children?: React.ReactNode;
 }
 
-
-export default function InfoCard({ header, items, children }: InfoCardProps) {
+export default function InfoCard({ header, items, ItemLayout = InfoCardItem, children }: InfoCardProps) {
   return (
     <Card>
       <BlockStack gap="400">
@@ -22,12 +15,9 @@ export default function InfoCard({ header, items, children }: InfoCardProps) {
         {items && items.length > 0 && (
           <InlineGrid columns={items.length} gap="400">
             {items.map((item, index) => (
-              <InfoCardItem
-                key={index}
-                title={item.title}
-                value={item.value}
-                subtitle={item.subtitle}
-              />
+              <Box key={index}>
+                <ItemLayout {...item} />
+              </Box>
             ))}
           </InlineGrid>
         )}

@@ -1,5 +1,6 @@
 import InfoCard from '../ui/InfoCard';
 import LatestHeader from './header';
+import LatestItem from './item';
 const latestData = [
     {
         title: 'New Infringement Detected',
@@ -22,9 +23,7 @@ const latestData = [
 export default function Latest(){
   return (
     <main>
-      <InfoCard header={<LatestHeader />} items={latestData}>
-      </InfoCard>
-
+      <InfoCard header={<LatestHeader />} items={latestData} ItemLayout={LatestItem}/>
     </main>
   )
 }
