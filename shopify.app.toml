@@ -1,7 +1,7 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
 client_id = "72ba66b0c8952a30ad7cdac71ef9facd"
-application_url = "https://scanned-lows-follow-behavior.trycloudflare.com"
+application_url = "https://ct-celebs-chose-journalists.trycloudflare.com"
 embedded = true
 name = "Bustem_Polaris"
 handle = "bustem_polaris"
@@ -23,9 +23,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://scanned-lows-follow-behavior.trycloudflare.com/auth/callback",
-  "https://scanned-lows-follow-behavior.trycloudflare.com/auth/shopify/callback",
-  "https://scanned-lows-follow-behavior.trycloudflare.com/api/auth/callback"
+  "https://ct-celebs-chose-journalists.trycloudflare.com/auth/callback",
+  "https://ct-celebs-chose-journalists.trycloudflare.com/auth/shopify/callback",
+  "https://ct-celebs-chose-journalists.trycloudflare.com/api/auth/callback"
 ]
 
 [pos]
