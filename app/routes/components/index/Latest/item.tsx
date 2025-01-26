@@ -1,14 +1,7 @@
 import {
-  BlockStack,
-  Text,
-  Box,
-  Card,
-  InlineStack,
-  Icon,
   CalloutCard,
 } from '@shopify/polaris';
 
-import type { IconSource } from '@shopify/polaris';
 
 interface LatestItemProps {
   title: string;

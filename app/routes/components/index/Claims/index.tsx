@@ -1,5 +1,5 @@
 import ClaimsHeader from './header';
-import InfoCard from '../ui/InfoCard';
+import InfoCard from '@ui/InfoCard';
 import ClaimsItem from './item';
 
 export default function Claims(){

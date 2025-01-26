@@ -1,4 +1,4 @@
-import InfoCard from '../ui/InfoCard';
+import InfoCard from '@ui/InfoCard';
 import LatestHeader from './header';
 import LatestItem from './item';
 const latestData = [

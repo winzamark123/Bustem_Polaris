@@ -2,6 +2,7 @@ import { vitePlugin as remix } from "@remix-run/dev";
 import { installGlobals } from "@remix-run/node";
 import { defineConfig, type UserConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import path from "path";
 
 installGlobals({ nativeFetch: true });
 
@@ -38,6 +39,11 @@ if (host === "localhost") {
 }
 
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@ui': path.resolve(__dirname, './app/routes/components/ui'),
+    },
+  },
   server: {
     port: Number(process.env.PORT || 3000),
     hmr: hmrConfig,
