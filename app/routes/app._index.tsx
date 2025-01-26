@@ -1,13 +1,11 @@
 import type { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/node";
-import { BlockStack, InlineStack, Page } from "@shopify/polaris";
+import { BlockStack, Page } from "@shopify/polaris";
 import { TitleBar } from "@shopify/app-bridge-react";
 import { authenticate } from "../shopify.server";
-import Demo from "./components/demo";
-import TestLayout from "./components/TestLayout";
-import Statistics from "./components/StatisticsDashboard";
-import Latest from "./components/Latest";
-import Claims from "./components/Claims";
-import CTAButton_Page from "./components/cta";
+import Statistics from "./components/index/StatisticsDashboard";
+import Latest from "./components/index/Latest";
+import Claims from "./components/index/Claims";
+import CTAButton_Page from "./components/index/cta";
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   await authenticate.admin(request);
   return null;
@@ -91,8 +89,8 @@ export default function Index() {
         <Latest />
         <Claims />
         <CTAButton_Page />
-        <Demo />
-        <TestLayout />
+        {/* <Demo /> */}
+        {/* <TestLayout /> */}
       </BlockStack>
     </Page>
   );

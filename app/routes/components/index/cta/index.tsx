@@ -1,4 +1,4 @@
-import { InlineGrid, InlineStack } from "@shopify/polaris";
+import { InlineGrid } from "@shopify/polaris";
 import CTAButton from "./CTAButton";
 
 const buttonData = [

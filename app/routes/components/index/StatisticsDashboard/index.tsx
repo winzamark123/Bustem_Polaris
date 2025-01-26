@@ -1,5 +1,5 @@
 import StatisticsHeader from './header';
-import InfoCard from '../ui/InfoCard';
+import InfoCard from '@ui/InfoCard';
 import StatisticsItem from './item';
 
 const statisticsData = [
