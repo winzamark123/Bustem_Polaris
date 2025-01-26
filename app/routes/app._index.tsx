@@ -1,5 +1,5 @@
 import type { ActionFunctionArgs, LoaderFunctionArgs } from "@remix-run/node";
-import { BlockStack, Page } from "@shopify/polaris";
+import { BlockStack, InlineStack, Page } from "@shopify/polaris";
 import { TitleBar } from "@shopify/app-bridge-react";
 import { authenticate } from "../shopify.server";
 import Demo from "./components/demo";
@@ -7,7 +7,7 @@ import TestLayout from "./components/TestLayout";
 import Statistics from "./components/StatisticsDashboard";
 import Latest from "./components/Latest";
 import Claims from "./components/Claims";
-
+import CTAButton_Page from "./components/cta";
 export const loader = async ({ request }: LoaderFunctionArgs) => {
   await authenticate.admin(request);
   return null;
@@ -90,6 +90,7 @@ export default function Index() {
         <Statistics />
         <Latest />
         <Claims />
+        <CTAButton_Page />
         <Demo />
         <TestLayout />
       </BlockStack>
